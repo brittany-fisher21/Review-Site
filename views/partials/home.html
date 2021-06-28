@@ -1,0 +1,6 @@
+<main>
+    <h1>${title}</h1>
+       ${data.map(SummerWine => 
+              `<p>This wine is called ${SummerWine.name} this wine is best paired with ${SummerWine.pairing}.</p>`
+       ).join('')}
+</main>
