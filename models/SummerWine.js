@@ -24,6 +24,17 @@ class SummerWine {
             return error;
         }
     }
+    static async getBySlug(slug) {
+        try {
+            const response = await db.one(`SELECT * FROM  SummerWine WHERE slug = '${slug}';`
+            );
+            
+            return response;
+        }catch (error) {
+            console.error('ERROR:', error);
+            return error;
+        }
+    }
 }
 
 module.exports = SummerWine;

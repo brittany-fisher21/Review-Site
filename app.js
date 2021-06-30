@@ -21,5 +21,8 @@ server.listen(port, hostname, () => {
 });
 
 const rootController = require('./routes/index');
+const wineController = require('./routes/summerwine');
+
 
 app.use('/', rootController);
+app.use('/wine', wineController);
